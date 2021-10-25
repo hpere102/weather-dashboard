@@ -314,6 +314,8 @@ var submitHandler = function(event) {
 
     } else {
         currentWeatherCont.textContent = "Please enter a valid city";
+        forecastDays.textContent = ""
+
         return;
     }
 };
