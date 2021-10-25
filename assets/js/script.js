@@ -3,6 +3,8 @@ var cityInput = document.querySelector("#city-input");
 var currentWeatherCont = document.querySelector("#current-weather");
 var contList = document.querySelector("#cont-list");
 var forecastDays = document.querySelector("#days-weather");
+var citiesList = [];
+
 
 
 
@@ -32,6 +34,7 @@ var getWeather = function(city) {
 var displayWeather = function(weather) {
     if (weather.length === 0) {
         currentWeatherCont.textContent = "Weather not available";
+
         return;
     }
     // display city,time,weather description
@@ -296,25 +299,30 @@ var displayWeather = function(weather) {
     card1Ul.appendChild(hum1Title);
     card1Div.appendChild(card1Ul);
     forecastDays.appendChild(card1Div);
-
-
-
-
-    
-    
-   
-
-  
 }
+
+var displayCities = function(event) {
+    var savedCity = document.createElement("span");
+    savedCity.textContent = localStorage.getItem()
+    var savedCityDiv = document.createElement("div");
+
+
+}
+
+
 
 var submitHandler = function(event) {
     event.preventDefault();
-
+    
     var cityEl = cityInput.value.trim();
+    
+    
+
 
     if (cityEl) {
-        getWeather(cityEl);
-        cityInput.value = "";
+         getWeather(cityEl);
+        cityInput.value = ""; 
+        
 
     } else {
         currentWeatherCont.textContent = "Please enter a valid city";
