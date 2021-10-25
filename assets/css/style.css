@@ -19,7 +19,6 @@
 }
 
 .left-panel {
-    background-color: burlywood;
     display: flex;
     height: 100%;
     width: 350px;
@@ -90,9 +89,12 @@
 }
 
 .forecast-panels {
-    background-color: darkslateblue;
-    width: 900px;
+    width: 1000px;
     height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
     
 }
 
@@ -106,8 +108,39 @@
 .right-side {
     display: flex;
     flex-direction: column;
-    background-color: darkmagenta;
     width: 100%;
     height: 600px;
     gap: 45px;
 }
+
+.card-div {
+    background-color: rgb(64, 75, 121);
+    padding: 12px;
+    width: 150px;
+    border-radius: 5px;
+
+}
+
+
+
+.li-class {
+    list-style: none;
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ 
+.bold-class {
+    font-weight: bold;
+    list-style: none;
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    padding-bottom: 10px;
+}
+
+

@@ -2,16 +2,8 @@ var userForm = document.querySelector("#submit-form");
 var cityInput = document.querySelector("#city-input");
 var currentWeatherCont = document.querySelector("#current-weather");
 var contList = document.querySelector("#cont-list");
-var forecastPanel1 = document.querySelector("#card-1");
-var forecastPanel2 = document.querySelector("#card-2");
-var forecastPanel3 = document.querySelector("#card-3");
-var forecastPanel4 = document.querySelector("#card-4");
-var forecastPanel5 = document.querySelector("#card-5");
-var forecastList1 = document.querySelector("#card-list-1");
-var forecastList2 = document.querySelector("#card-list-2");
-var forecastList3 = document.querySelector("#card-list-3");
-var forecastList4 = document.querySelector("#card-list-4");
-var forecastList5 = document.querySelector("#card-list-5");
+var forecastDays = document.querySelector("#days-weather");
+
 
 
 
@@ -48,7 +40,7 @@ var displayWeather = function(weather) {
     var infoDiv = document.createElement("div");
     infoDiv.classList.add("info-border");
     cityTitle = document.createElement("li");
-    cityTitle.textContent = cityFacts + "  (" + cityDay +")   " + cityIcon;
+    cityTitle.textContent = cityFacts + "  (" + cityDay + ")   " + cityIcon;
     contList.appendChild(cityTitle);
     infoDiv.appendChild(contList);
     currentWeatherCont.appendChild(infoDiv);
@@ -59,7 +51,7 @@ var displayWeather = function(weather) {
     var cityTemp = weather.list[0].main.temp;
     console.log(cityTemp);
     tempTitle = document.createElement("li");
-    tempTitle.textContent = "Temp:  " + cityTemp;
+    tempTitle.textContent = "Temp:  " + cityTemp + " °F";
     tempTitle.style.cssText = "margin-bottom: 20px;"
     contList.appendChild(tempTitle);
     infoDiv.appendChild(contList)
@@ -89,6 +81,222 @@ var displayWeather = function(weather) {
     
 
     // display uv
+
+    // display card 1 
+
+    // display date
+    var date1 = weather.list[2].dt_txt;
+    date1Title = document.createElement("li");
+    date1Title.classList.add("bold-class")
+    card1Ul = document.createElement("ul");
+    card1Ul.classList.add("card-ul");
+    card1Div = document.createElement("div");
+    card1Div.classList.add("card-div");
+    date1Title.textContent = date1  + " PM";
+    card1Ul.appendChild(date1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display temp
+    var temp1 = weather.list[2].main.temp;
+    temp1Title = document.createElement("li");
+    temp1Title.classList.add("li-class")
+    temp1Title.textContent = "Temp:  " + temp1 + " °F";
+    card1Ul.appendChild(temp1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display wind
+    var wind1 = weather.list[2].wind.speed;
+    wind1Title = document.createElement("li");
+    wind1Title.classList.add("li-class")
+    wind1Title.textContent = "Wind:  " + wind1 + " MPH";
+    card1Ul.appendChild(wind1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display humidity
+    var hum1 = weather.list[2].main.humidity;
+    hum1Title = document.createElement("li");
+    hum1Title.classList.add("li-class")
+    hum1Title.textContent = "Humidity:  " + hum1 + "%";
+    card1Ul.appendChild(hum1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display card 2
+
+    // display date
+    var date1 = weather.list[10].dt_txt;
+    date1Title = document.createElement("li");
+    date1Title.classList.add("bold-class")
+    card1Ul = document.createElement("ul");
+    card1Ul.classList.add("card-ul");
+    card1Div = document.createElement("div");
+    card1Div.classList.add("card-div");
+    date1Title.textContent = date1 + " PM";
+    card1Ul.appendChild(date1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display temp
+    var temp1 = weather.list[10].main.temp;
+    temp1Title = document.createElement("li");
+    temp1Title.classList.add("li-class")
+    temp1Title.textContent = "Temp:  " + temp1 + " °F";
+    card1Ul.appendChild(temp1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display wind
+    var wind1 = weather.list[10].wind.speed;
+    wind1Title = document.createElement("li");
+    wind1Title.classList.add("li-class")
+    wind1Title.textContent = "Wind:  " + wind1 + " MPH";
+    card1Ul.appendChild(wind1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // dsiplay humidity
+    var hum1 = weather.list[10].main.humidity;
+    hum1Title = document.createElement("li");
+    hum1Title.classList.add("li-class")
+    hum1Title.textContent = "Humidity:  " + hum1 + "%";
+    card1Ul.appendChild(hum1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display card 3 
+
+    // display date
+    var date1 = weather.list[18].dt_txt;
+    date1Title = document.createElement("li");
+    date1Title.classList.add("bold-class")
+    card1Ul = document.createElement("ul");
+    card1Ul.classList.add("card-ul");
+    card1Div = document.createElement("div");
+    card1Div.classList.add("card-div");
+    date1Title.textContent = date1  + " PM";
+    card1Ul.appendChild(date1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+    
+
+    // display temp
+    var temp1 = weather.list[18].main.temp;
+    temp1Title = document.createElement("li");
+    temp1Title.classList.add("li-class")
+    temp1Title.textContent = "Temp:  " + temp1 + " °F";
+    card1Ul.appendChild(temp1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display wind
+    var wind1 = weather.list[18].wind.speed;
+    wind1Title = document.createElement("li");
+    wind1Title.classList.add("li-class")
+    wind1Title.textContent = "Wind:  " + wind1 + " MPH";
+    card1Ul.appendChild(wind1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // dsiplay humidity
+    var hum1 = weather.list[18].main.humidity;
+    hum1Title = document.createElement("li");
+    hum1Title.classList.add("li-class")
+    hum1Title.textContent = "Humidity:  " + hum1 + "%";
+    card1Ul.appendChild(hum1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display card 4 
+
+    // display date
+    var date1 = weather.list[26].dt_txt;
+    date1Title = document.createElement("li");
+    date1Title.classList.add("bold-class")
+    card1Ul = document.createElement("ul");
+    card1Ul.classList.add("card-ul");
+    card1Div = document.createElement("div");
+    card1Div.classList.add("card-div");
+    date1Title.textContent = date1  + " PM";
+    card1Ul.appendChild(date1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display temp
+    var temp1 = weather.list[26].main.temp;
+    temp1Title = document.createElement("li");
+    temp1Title.classList.add("li-class")
+    temp1Title.textContent = "Temp:  " + temp1 + " °F";
+    card1Ul.appendChild(temp1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display wind
+    var wind1 = weather.list[26].wind.speed;
+    wind1Title = document.createElement("li");
+    wind1Title.classList.add("li-class")
+    wind1Title.textContent = "Wind:  " + wind1 + " MPH";
+    card1Ul.appendChild(wind1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // dsiplay humidity
+    var hum1 = weather.list[26].main.humidity;
+    hum1Title = document.createElement("li");
+    hum1Title.classList.add("li-class")
+    hum1Title.textContent = "Humidity:  " + hum1 + "%";
+    card1Ul.appendChild(hum1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display card 5
+
+    // display date
+    var date1 = weather.list[26].dt_txt;
+    date1Title = document.createElement("li");
+    date1Title.classList.add("bold-class")
+    card1Ul = document.createElement("ul");
+    card1Ul.classList.add("card-ul");
+    card1Div = document.createElement("div");
+    card1Div.classList.add("card-div");
+    date1Title.textContent = date1  + " PM";
+    card1Ul.appendChild(date1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display temp
+    var temp1 = weather.list[26].main.temp;
+    temp1Title = document.createElement("li");
+    temp1Title.classList.add("li-class")
+    temp1Title.textContent = "Temp:  " + temp1 + " °F";
+    card1Ul.appendChild(temp1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // display wind
+    var wind1 = weather.list[26].wind.speed;
+    wind1Title = document.createElement("li");
+    wind1Title.classList.add("li-class")
+    wind1Title.textContent = "Wind:  " + wind1 + " MPH";
+    card1Ul.appendChild(wind1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+    // dsiplay humidity
+    var hum1 = weather.list[26].main.humidity;
+    hum1Title = document.createElement("li");
+    hum1Title.classList.add("li-class")
+    hum1Title.textContent = "Humidity:  " + hum1 + "%";
+    card1Ul.appendChild(hum1Title);
+    card1Div.appendChild(card1Ul);
+    forecastDays.appendChild(card1Div);
+
+
+
+
+    
     
    
 
@@ -103,7 +311,7 @@ var submitHandler = function(event) {
     if (cityEl) {
         getWeather(cityEl);
         cityInput.value = "";
-        
+
     } else {
         currentWeatherCont.textContent = "Please enter a valid city";
         return;
