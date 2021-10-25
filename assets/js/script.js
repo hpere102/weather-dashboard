@@ -7,20 +7,24 @@ var forecastDays = document.querySelector("#days-weather");
 
 
 
-
-
-
 var getWeather = function(city) {
 
     var weatherDetails = "https://api.openweathermap.org/data/2.5/forecast?&units=imperial&appid=885e9149105e8901c9809ac018ce8658&q=" + city
 
-    $.get(weatherDetails, function( data ) {
-        $( ".result" ).html( data );
-        displayWeather(data);
-        console.log(data);
-        
-        
+    fetch(weatherDetails).then(function(response) {
+        if (response.ok) {
+            response.json().then(function(data) {
+                displayWeather(data);
+                console.log(data);
+            });
+        } else {
+            alert("city not found");
+        }
     })
+    .catch(function(error) {
+        // Notice this `.catch()` getting chained onto the end of the `.then()` method
+        alert("Unable to get weather");
+      })
 };
 
 
