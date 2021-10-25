@@ -33,6 +33,7 @@
     gap: 10px;
     border:grey;
     border: solid;
+    border-width: 2px;
     border-radius: 4px;
     padding: 10px;
     
@@ -56,4 +57,17 @@
     height: 30px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.current-container {
+    background-color: darkred;
+    width: 795px;
+    height: 270px;
+    position: relative;
+    left: 350px;
+    bottom: 174px;
+    display: flex;
+    padding: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
